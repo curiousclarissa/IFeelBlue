@@ -8,12 +8,13 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     //all students start with a score of 1 for participating
     int needsScore = 0;
     String userColor = "";
-    //String indicationText = getString(R.string.indication);
+    String indicationText;
     //user gets a star score for participating each question and one to start
     int starsScore = 1;
     String userFeeling = "";
@@ -24,14 +25,12 @@ public class MainActivity extends AppCompatActivity {
         final int needsScoreFinal = checkedScore();
         EditText feelingField = (EditText) findViewById(R.id.feeling_sentence);
         String feeling = feelingField.getText().toString();
-        String studentMessage = "first";
+        String studentMessage = indicationText;
         studentMessage = studentMessage + " " + userFeeling;
         //validate student's color description of feeling
-        studentMessage = studentMessage + "/n and you are feeling like the color " + userColor;
-        //valid feeling word user used to describe self
+        studentMessage = studentMessage + "\n and you are feeling like the color " + userColor;
         //remind user they said they need
-        //remind user of which tools they will use
-        //tell user to say, "I see myself as___" 5 times.
+        studentMessage = studentMessage + "\n You said you need " + feeling;
         //report user's need for help or needsScore
         studentMessage = studentMessage + "\n " + "You have a need for " + needsScoreFinal + " tools.";
         //report star score
@@ -40,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         TextView quizSummaryTextView;
         quizSummaryTextView = findViewById(R.id.quiz_summary);
         quizSummaryTextView.setText(studentMessage);
+        Toast.makeText(this, "Your score is " + starsScore + " stars.", Toast.LENGTH_SHORT).show();
         return studentMessage;
 
     }
@@ -60,16 +60,16 @@ public class MainActivity extends AppCompatActivity {
         if (needsFood == true){
             needsScore += 1;
         }
-        if (needsHug == true){
+        else if (needsHug == true){
             needsScore += 1;
         }
-        if (needsToSqueeze == true){
+       else if (needsToSqueeze == true){
             needsScore += 1;
         }
-        if (needsToExpress == true){
+        else if (needsToExpress == true){
             needsScore += 1;
         }
-        if (needsRest == true){
+        else if (needsRest == true){
             needsScore += 1;
         }
         starsScore += 1;
@@ -84,11 +84,11 @@ public class MainActivity extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.radio_angry:
                 if (checked)
-                    userFeeling = "@string/angry";
+                    userFeeling = "angry";
                     break;
             case R.id.radio_active:
                 if (checked)
-                    userFeeling= "@string/active";
+                    userFeeling= "active";
                     break;
             case R.id.radio_sad:
                 if (checked)
@@ -96,50 +96,31 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.radio_happy:
                 if (checked)
-                    userFeeling = "@string/happy";
+                    userFeeling = "happy";
                 break;
 
             case R.id.radio_hungry:
                 if (checked)
-                    userFeeling= "@string/hungry";
+                    userFeeling= "hungry";
                 break;
         }
         starsScore += 1;
     }
-    private String displayMessage(String userColor, String userFeeling, int needsScoreFinal){
-        String studentMessage = "@string/indication";
-        studentMessage = studentMessage + " " + userFeeling;
-        //validate student's color description of feeling
-        studentMessage = studentMessage + "/n and you are feeling like the color " + userColor;
-        //valid feeling word user used to describe self
-        //remind user they said they need
-        //remind user of which tools they will use
-        //tell user to say, "I see myself as___" 5 times.
-        //report user's need for help or needsScore
-        studentMessage = studentMessage + "/n " + "You have a need for " + needsScoreFinal + " tools.";
-        //report star score
-        studentMessage = studentMessage + "/n " + "You've earned " + starsScore + " stars.";
-        Log.v("message", studentMessage);
-        TextView quizSummaryTextView;
-        quizSummaryTextView = findViewById(R.id.quiz_summary);
-        quizSummaryTextView.setText(studentMessage);
-        return studentMessage;
 
-    }
     public void onYellow(View v) {
-        userColor = "@string/yellow";
+        userColor = "yellow";
         starsScore += 1;
     }
     public void onBlue(View v) {
-        userColor = "@string/Blue";
+        userColor = "blue";
         starsScore += 1;
     }
     public void onRed(View v) {
-        userColor = "@string/Red";
+        userColor = "red";
         starsScore += 1;
     }
     public void onGreen(View v) {
-        userColor = "@string/Green";
+        userColor = "green";
         starsScore += 1;
     }
 
@@ -148,5 +129,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        indicationText = getString(R.string.indication);
     }
 }

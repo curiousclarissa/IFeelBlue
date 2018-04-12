@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">IFeelBlue</string>
-    <string name="description">This app let's us share how we feel even when it is hard.</string>
+    <string name="description">This app let\'s us share how we feel even when it is hard.</string>
     <string name="q1directions">Click on the color that describes how you feel.</string>
     <string name="yellow">YELLOW</string>
     <string name="blue">BLUE</string>
@@ -12,19 +12,14 @@
     <string name="angry">angry</string>
     <string name="sad">sad</string>
     <string name="happy">happy</string>
-    <string name="worried">worried</string>
-    <string name="scared">scared</string>
-    <string name="excited">excited</string>
-    <string name="tired">tired</string>
     <string name="active">active</string>
     <string name="hungry">hungry</string>
-    <string name="q4directions">The tools or strategies I'll reach for are.</string>
+    <string name="q4directions">The tools or strategies I\'ll reach for are.</string>
     <string name="checkbox_hunger">a snack or drink</string>
     <string name="checkbox_hug">a hug</string>
     <string name="checkbox_squeeze">squeeze something</string>
     <string name="checkbox_expression">draw or write</string>
     <string name="checkbox_rest">take a rest</string>
-    <string name="i_see_myself">When my tools work, I see myself as the color </string>
     <string name="submit">Submit</string>
     <string name="indication">You indicated you are feeling</string>
 
