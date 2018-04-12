@@ -24,7 +24,7 @@
                 android:paddingTop="16dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:maxLines="10"
+                android:maxLines="100"
                 android:text="@string/description"
                 />
             <TextView
@@ -78,42 +78,50 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:text="@string/angry"/>
+            android:text="@string/angry"
+            android:onClick="onRadioButtonClicked"/>
         <RadioButton
             android:id="@+id/radio_sad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sad"/>
+            android:text="@string/sad"
+            android:onClick="onRadioButtonClicked"/>
         <RadioButton
             android:id="@+id/radio_happy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/happy"/>
+            android:text="@string/happy"
+            android:onClick="onRadioButtonClicked"/>
         <RadioButton
             android:id="@+id/radio_worried"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/worried"/>
+            android:text="@string/worried"
+            android:onClick="onRadioButtonClicked"/>
         <RadioButton
             android:id="@+id/radio_excited"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/excited"/>
+            android:text="@string/excited"
+            android:onClick="onRadioButtonClicked"/>
         <RadioButton
             android:id="@+id/radio_tired"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tired"/>
+            android:text="@string/tired"
+            android:onClick="onRadioButtonClicked"/>
         <RadioButton
             android:id="@+id/radio_active"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/active"/>
+            android:text="@string/active"
+            android:onClick="onRadioButtonClicked"/>
         <RadioButton
             android:id="@+id/radio_hungry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hungry"/>
+            android:text="@string/hungry"
+            android:onClick="onRadioButtonClicked"/>
         </RadioGroup>
 
         <TextView
@@ -138,11 +146,52 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/checkbox_hunger"/>
+        <CheckBox
+            android:id="@+id/checkbox_hug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox_hug"/>
+        <CheckBox
+            android:id="@+id/checkbox_squeeze"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox_squeeze"/>
+        <CheckBox
+            android:id="@+id/checkbox_expression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox_expression"/>
+        <CheckBox
+            android:id="@+id/checkbox_rest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox_rest"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/i_see_myself"
+            android:text="@string/i_see_myself"/>
 
 
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:onClick="submit">
 
+        </Button>
+        <TextView
+            android:id="@+id/quiz_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Your Report Will Be Here"
+            android:textSize="16sp" />
 
     </LinearLayout>
+
 
 
 </ScrollView>

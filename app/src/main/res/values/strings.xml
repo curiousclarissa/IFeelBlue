@@ -20,6 +20,14 @@
     <string name="hungry">hungry</string>
     <string name="q4directions">The tools or strategies I'll reach for are.</string>
     <string name="checkbox_hunger">a snack or drink</string>
+    <string name="checkbox_hug">a hug</string>
+    <string name="checkbox_squeeze">squeeze something</string>
+    <string name="checkbox_expression">draw or write</string>
+    <string name="checkbox_rest">take a rest</string>
+    <string name="i_see_myself">When my tools work, I see myself as the color </string>
+    <string name="submit">Submit</string>
+    <string name="indication">You indicated you are feeling</string>
+
 
 
 
