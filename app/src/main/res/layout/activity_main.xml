@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fillViewport="false">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.example.android.ifeelblue.MainActivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:maxLines="10"
+                android:text="@string/description"
+                />
+            <TextView
+                android:id="@+id/q1directions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/description"
+                android:padding="16dp"
+                android:text="@string/q1directions"
+                />
+            <Button
+                android:id="@+id/yellow_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/q1directions"
+                android:text="@string/yellow"/>
+            <Button
+                android:id="@+id/green_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/q1directions"
+                android:text="@string/green"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/red_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/yellow_button"
+                android:text="@string/red"/>
+            <Button
+                android:id="@+id/blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/green_button"
+                android:text="@string/blue"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/q2directions"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radio_angry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:text="@string/angry"/>
+        <RadioButton
+            android:id="@+id/radio_sad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sad"/>
+        <RadioButton
+            android:id="@+id/radio_happy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/happy"/>
+        <RadioButton
+            android:id="@+id/radio_worried"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/worried"/>
+        <RadioButton
+            android:id="@+id/radio_excited"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/excited"/>
+        <RadioButton
+            android:id="@+id/radio_tired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tired"/>
+        <RadioButton
+            android:id="@+id/radio_active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/active"/>
+        <RadioButton
+            android:id="@+id/radio_hungry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hungry"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/needs_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/q3directions" />
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:hint="@string/feeling_sentence_sample"/>
+        <TextView
+            android:id="@+id/tools_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/q4directions" />
+        <CheckBox
+            android:id="@+id/checkbox_hunger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox_hunger"/>
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
