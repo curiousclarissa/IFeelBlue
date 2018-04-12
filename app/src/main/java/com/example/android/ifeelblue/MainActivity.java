@@ -96,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
         //tell user to say, "I see myself as___" 5 times.
         //report user's need for help or needsScore
         studentMessage = studentMessage + "/n " + "You have a need for " + needsScoreFinal + " tools.";
+        //report star score
+        studentMessage = studentMessage + "/n " + "You've earned " + starsScore " stars.";
         Log.v("message", studentMessage);
         TextView quizSummaryTextView;
         quizSummaryTextView = findViewById(R.id.quiz_summary);
