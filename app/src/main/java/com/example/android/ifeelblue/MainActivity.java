@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -12,15 +13,34 @@ public class MainActivity extends AppCompatActivity {
     //all students start with a score of 1 for participating
     int needsScore = 0;
     String userColor = "";
+    //String indicationText = getString(R.string.indication);
     //user gets a star score for participating each question and one to start
     int starsScore = 1;
     String userFeeling = "";
     /**
      * This method is called when the submit button is clicked.
      */
-    public void submit(View view) {
+    public String submit(View view) {
         final int needsScoreFinal = checkedScore();
-
+        EditText feelingField = (EditText) findViewById(R.id.feeling_sentence);
+        String feeling = feelingField.getText().toString();
+        String studentMessage = "first";
+        studentMessage = studentMessage + " " + userFeeling;
+        //validate student's color description of feeling
+        studentMessage = studentMessage + "/n and you are feeling like the color " + userColor;
+        //valid feeling word user used to describe self
+        //remind user they said they need
+        //remind user of which tools they will use
+        //tell user to say, "I see myself as___" 5 times.
+        //report user's need for help or needsScore
+        studentMessage = studentMessage + "\n " + "You have a need for " + needsScoreFinal + " tools.";
+        //report star score
+        studentMessage = studentMessage + "\n " + "You've earned " + starsScore + " stars.";
+        Log.v("message", studentMessage);
+        TextView quizSummaryTextView;
+        quizSummaryTextView = findViewById(R.id.quiz_summary);
+        quizSummaryTextView.setText(studentMessage);
+        return studentMessage;
 
     }
     private int checkedScore(){
@@ -52,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         if (needsRest == true){
             needsScore += 1;
         }
+        starsScore += 1;
         return needsScore;
     }
     // let user report feeling word with radio button
@@ -97,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
         //report user's need for help or needsScore
         studentMessage = studentMessage + "/n " + "You have a need for " + needsScoreFinal + " tools.";
         //report star score
-        studentMessage = studentMessage + "/n " + "You've earned " + starsScore " stars.";
+        studentMessage = studentMessage + "/n " + "You've earned " + starsScore + " stars.";
         Log.v("message", studentMessage);
         TextView quizSummaryTextView;
         quizSummaryTextView = findViewById(R.id.quiz_summary);

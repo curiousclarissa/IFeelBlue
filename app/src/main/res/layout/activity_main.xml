@@ -135,6 +135,7 @@
             android:text="@string/q3directions" />
 
         <EditText
+            android:id="@+id/feeling_sentence"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:hint="@string/feeling_sentence_sample"/>
