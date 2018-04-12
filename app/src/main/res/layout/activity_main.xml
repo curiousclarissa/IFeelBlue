@@ -41,7 +41,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/q1directions"
-                android:text="@string/yellow"/>
+                android:text="@string/yellow"
+                android:onClick="onYellow"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/q1directions"
+                android:layout_toRightOf="@+id/yellow_button"
+                android:src="@drawable/sun"
+                android:scaleType="centerCrop"
+                />
             <Button
                 android:id="@+id/green_button"
                 android:layout_width="wrap_content"
@@ -49,20 +58,31 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/q1directions"
                 android:text="@string/green"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:onClick="onGreen"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/green_button"
+                android:layout_toLeftOf="@+id/blue_button"
+                android:src="@drawable/blueocean"
+                android:scaleType="centerCrop"
+                />
             <Button
                 android:id="@+id/red_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/yellow_button"
-                android:text="@string/red"/>
+                android:text="@string/red"
+                android:onClick="onRed"/>
             <Button
                 android:id="@+id/blue_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/green_button"
-                android:text="@string/blue"/>
+                android:text="@string/blue"
+                android:onClick="onBlue"/>
 
         </RelativeLayout>
 
@@ -92,24 +112,7 @@
             android:layout_height="wrap_content"
             android:text="@string/happy"
             android:onClick="onRadioButtonClicked"/>
-        <RadioButton
-            android:id="@+id/radio_worried"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/worried"
-            android:onClick="onRadioButtonClicked"/>
-        <RadioButton
-            android:id="@+id/radio_excited"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/excited"
-            android:onClick="onRadioButtonClicked"/>
-        <RadioButton
-            android:id="@+id/radio_tired"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tired"
-            android:onClick="onRadioButtonClicked"/>
+
         <RadioButton
             android:id="@+id/radio_active"
             android:layout_width="wrap_content"
